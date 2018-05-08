@@ -6,6 +6,20 @@ var eurobeat = document.getElementById("eurobeat");
 
 var winner = 0;
 
+function winner() {
+	console.log("Winner determined: " + winner);
+
+	eurobeat.pause();
+	eurobeat.currentTime = 0;
+	stoplight.src = "resources/images/traffic-light-red.svg";
+	stoplightlink.onclick = reset;
+}
+
+function reset() {
+	console.log("Resetting race");
+	stoplightlink.onclick = race;
+}
+
 function race() {
 	console.log("Beginning race");
 
@@ -44,16 +58,3 @@ function race() {
 	var timer = setInterval(tick, 15);
 }
 
-function winner() {
-	console.log("Winner determined: " + winner);
-
-	eurobeat.pause();
-	eurobeat.currentTime = 0;
-	stoplight.src = "resources/images/traffic-light-red.svg";
-	stoplightlink.onclick = reset;
-}
-
-function reset() {
-	console.log("Resetting race");
-	stoplightlink.onclick = race;
-}
