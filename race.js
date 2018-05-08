@@ -7,10 +7,8 @@ function race() {
   eurobeat.play();
   do {
     console.log("Attempting movement iteration")
-    var racer1_current_pos = racer1.style.left;
-    racer1_current_pos = racer1_current_pos.toLocaleString("en");
-    var racer2_current_pos = racer2.style.left;
-    racer2_current_pos = racer2_current_pos.toLocaleString("en");
+    var racer1_current_pos = document.getElementById("racer1").style.left;
+    var racer2_current_pos = document.getElementById("racer2").style.left;
     console.log("racer1 starts at: " + racer1_current_pos);
     console.log("racer2 starts at: " + racer2_current_pos);
     // Sets the speeds of the racers.
@@ -30,7 +28,7 @@ function race() {
       winner = "racer2";
     }
   }
-   while (winner == null);
+   while true;
   eurobeat.pause();
   eurobeat.currentTime = 0;
   return 0;
