@@ -20,15 +20,14 @@ function endrace() {
 	winbeat.volume = 0.4;
 	winbeat.play();
 
-	switch(winner) {
-		case "racer1":
-			winnertext.innerHTML = "藤原 拓海! WINRAR!";
-		case "racer2":
-			winnertext.innerHTML = "BORING CORVETTE WINS!";
-		case "tie":
-			winnertext.innerHTML = "EVERYBODY WINS!";
-		default:
-			winnertext.innerHTML = "0xDEADBEEF";
+	if (winner == 1) {
+		winnertext.innerHTML = "藤原 拓海! WINRAR!";
+	} else if (winner == 2) {
+		winnertext.innerHTML = "BORING CORVETTE WINS!";
+	} else if (winner == 3) {
+		winnertext.innerHTML = "EVERYBODY WINS!";
+	} else {
+		winnertext.innerHTML = "0xDEADBEEF";
 	}
 
 	winner = 0;
@@ -67,13 +66,13 @@ function race() {
 
 		//Check if car passed finish line
 		if (parseFloat(racer1.style.left) > 85) {
-			winner = "racer1";
+			winner = 1;
 		}
 		if (parseFloat(racer2.style.left) > 85) {
-			if (winner == "racer1") {
-				winner = "tie";
+			if (winner == 1) {
+				winner = 3;
 			} else {
-				winner = "racer2";
+				winner = 2;
 			}
 		}
 		if (winner !== 0) {
