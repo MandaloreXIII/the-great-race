@@ -28,8 +28,13 @@ function race() {
 		//Check if car passed finish line
 		if (racer1.style.left.toLocaleString("en", {style: "decimial"}) > 0.9) {
 			winner = "racer1";
-		} else if (racer2.style.left.toLocaleString("en", {style: "decimial"}) > 0.9) {
-			winner = "racer2";
+		}
+		if (racer2.style.left.toLocaleString("en", {style: "decimial"}) > 0.9) {
+			if (winner == "racer1") {
+				winner = "tie";
+			} else {
+				winner = "racer2";
+			}
 		}
 		if (winner != 0) {
 			clearInterval(timer);
