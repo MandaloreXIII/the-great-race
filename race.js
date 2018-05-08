@@ -6,6 +6,8 @@ function race() {
     // Sets the speeds of the racers.
     var racer1_speed = Math.floor(Math.random()*(4)) + 3;
     var racer2_speed = Math.floor(Math.random()*(4)) + 3;
+    racer1_speed.toLocaleString("en", {style: "percent"});
+    racer2_speed.toLocaleString("en", {style: "percent"});
     // INSERT THE ITERATION OF CARS ON SCREEN
     racer1.left += racer1_speed;
     racer2.left += racer2_speed;
