@@ -3,6 +3,7 @@ function race() {
   var racer1 = document.getElementById("racer1");
   var racer2 = document.getElementById("racer2");
   var eurobeat = document.getElementById("eurobeat");
+  eurobeat.volume = 0.2;
   eurobeat.play();
   do {
     // Sets the speeds of the racers.
