@@ -15,13 +15,13 @@ body {
 #racer1 {
 	position: absolute;
 	top: 250pt;
-	left: 30pt;
+	left: 5%;
 }
 
 #racer2 {
 	position: absolute;
 	top: 350pt;
-	left: 30pt;
+	left: 5%;
 }
 
 #stoplight {
