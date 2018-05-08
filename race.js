@@ -7,7 +7,7 @@ function race() {
     // INSERT THE ITERATION OF CARS ON SCREEN
 
     //Check if car passed finish line
-
+    if ()
   }
    while (winner = null);
 }
