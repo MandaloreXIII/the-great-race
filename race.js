@@ -6,7 +6,7 @@ var eurobeat = document.getElementById("eurobeat");
 
 var winner = 0;
 
-function winner() {
+function endrace() {
 	console.log("Winner determined: " + winner);
 
 	eurobeat.pause();
@@ -50,9 +50,9 @@ function race() {
 				winner = "racer2";
 			}
 		}
-		if (winner != 0) {
+		if (winner !== 0) {
 			clearInterval(timer);
-			winner();
+			endrace();
 		}
 	}
 	var timer = setInterval(tick, 15);
