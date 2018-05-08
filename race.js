@@ -12,7 +12,7 @@ function race() {
     console.log("racer1 starts at: " + racer1_current_pos);
     console.log("racer2 starts at: " + racer2_current_pos);
     // Sets the speeds of the racers.
-    var racer1_speed = Math.floor(Math.random()*(0.04)) + 0.9;
+    var racer1_speed = Math.floor(Math.random()*(0.04)) + 0.03;
     var racer2_speed = Math.floor(Math.random()*(0.04)) + 0.03;
     racer1_speed = racer1_speed.toLocaleString("en", {style: "percent"});
     racer2_speed = racer2_speed.toLocaleString("en", {style: "percent"});
