@@ -26,9 +26,9 @@ function race() {
     racer2.style.left = racer2_new_pos;
     console.log("Racer 1 pos: " + racer1.style.left + " Racer 2 pos: " + racer2.style.left);
     //Check if car passed finish line
-    if (racer1.style.left > "90%") {
+    if (racer1.style.left.toLocaleString("en", {style: "decimial"}) > 0.9) {
       winner = "racer1";
-    } else if (racer2.style.left > "90%") {
+    } else if (racer2.style.left.toLocaleString("en", {style: "decimial"}) > 0.9) {
       winner = "racer2";
     }
   }
