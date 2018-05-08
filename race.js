@@ -23,7 +23,7 @@ function race() {
     //TODO: THE ITERATION OF CARS ON SCREEN
     console.log("Racer 1 pos: " + racer1.style.left + " Racer 2 pos: " + racer2.style.left);
     racer1.style.left = racer1_new_pos;
-    racer2.style.left += racer2_new_pos;
+    racer2.style.left = racer2_new_pos;
     console.log("Racer 1 pos: " + racer1.style.left + " Racer 2 pos: " + racer2.style.left);
     //Check if car passed finish line
     if (racer1.style.left > "90%") {
