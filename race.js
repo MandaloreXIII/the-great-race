@@ -1,4 +1,4 @@
-function race() {
+window.onload = function race() {
   var winner = null;
   var racer1 = document.getElementById("racer1");
   var racer2 = document.getElementById("racer2");
@@ -18,8 +18,6 @@ function race() {
     if (racer1.left > "90%") {
       winner = "racer1";
     } else if (racer2.left > "90%") {
-    }
-    elseif (racer2.left > "90%") {
       winner = "racer2";
     }
   }
