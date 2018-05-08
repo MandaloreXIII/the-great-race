@@ -1,8 +1,9 @@
 @charset "utf-8";
 
 html{
-   background: url(wallhaven-43122.jpg);
+	background: url(resources/images/bg.jpg);
 }
+
 body {
 	background: white;
 	color: black;
