@@ -25,5 +25,3 @@ window.onload = function race() {
   eurobeat.pause();
   eurobeat.currentTime = 0;
 }
-
-document.getElementById("stoplight").onclick = race();
