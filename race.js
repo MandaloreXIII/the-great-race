@@ -21,8 +21,8 @@ function race() {
 		// Transition them
 		console.log("R1Spd: " + racer1_speed + " R2Spd: " + racer2_speed);
 		console.log("R1Prev: " + racer1.style.left + " R2Prev: " + racer2.style.left);
-		racer1.style.left = (racer1.style.left.toLocaleString("en", {style: "decimal"}) + racer1_speed).toLocaleString("en", {style: "percentage"});
-		racer2.style.left = (racer2.style.left.toLocaleString("en", {style: "decimal"}) + racer2_speed).toLocaleString("en", {style: "percentage"});
+		racer1.style.left = (parseFloat(racer1.style.left)/100 + racer1_speed).toLocaleString("en", {style: "percent"});
+		racer2.style.left = (parseFloat(racer2.style.left)/100 + racer2_speed).toLocaleString("en", {style: "percent"});
 		console.log("R1Post: " + racer1.style.left + " R2Post: " + racer2.style.left);
 
 		//Check if car passed finish line
@@ -41,7 +41,7 @@ function race() {
 			winner();
 		}
 	}
-	var timer = setInterval(tick, 5);
+	var timer = setInterval(tick, 15);
 }
 
 function winner() {
