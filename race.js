@@ -17,8 +17,7 @@ function race() {
     //Check if car passed finish line
     if (racer1.left > "90%") {
       winner = "racer1";
-    }
-    elseif (racer2.left > "90%") {
+    } else if (racer2.left > "90%") {
       winner = "racer2";
     }
   }
@@ -26,3 +25,5 @@ function race() {
   eurobeat.pause();
   eurobeat.currentTime = 0;
 }
+
+document.getElementById("stoplight").onclick = race();
