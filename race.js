@@ -4,8 +4,8 @@ function race() {
   var racer2 = document.getElementById("racer2");
   do {
     // Sets the speeds of the racers.
-    var racer1_speed = Math.floor(Math.random()*(41)) + 80;
-    var racer2_speed = Math.floor(Math.random()*(41)) + 80;
+    var racer1_speed = Math.floor(Math.random()*(4)) + 3;
+    var racer2_speed = Math.floor(Math.random()*(4)) + 3;
     // INSERT THE ITERATION OF CARS ON SCREEN
     racer1.left += racer1_speed;
     racer2.left += racer2_speed;
