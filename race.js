@@ -1,4 +1,4 @@
-window.onload = function race() {
+function race() {
   var winner = null;
   var racer1 = document.getElementById("racer1");
   var racer2 = document.getElementById("racer2");
@@ -21,7 +21,8 @@ window.onload = function race() {
       winner = "racer2";
     }
   }
-   while (winner = null);
+   while (winner == null);
   eurobeat.pause();
   eurobeat.currentTime = 0;
+  return 0;
 }
