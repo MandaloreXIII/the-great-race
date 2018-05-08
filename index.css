@@ -29,3 +29,13 @@ body {
 	width: 100pt;
 }
 
+#winnertext {
+	color: yellow;
+	font-size: 500%;
+	font-weight: bold;
+	position: relative;
+	top: 80pt;
+	text-align: center;
+	text-shadow: 4px 4px 5px cyan;
+}
+
