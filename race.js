@@ -11,8 +11,6 @@ function race() {
     var racer1_speed = Math.floor(Math.random()*(0.04)) + 0.03;
     var racer2_speed = Math.floor(Math.random()*(0.04)) + 0.03;
     console.log("Racer 1: " + racer1_speed + " Racer 2: " + racer2_speed);
-    racer1_speed = racer1_speed.toLocaleString("en", {style: "percent"});
-    racer2_speed = racer2_speed.toLocaleString("en", {style: "percent"});
     console.log("Racer 1: " + racer1_speed + " Racer 2: " + racer2_speed);
     //TODO: THE ITERATION OF CARS ON SCREEN
     console.log("Racer 1 pos: " + racer1.style.left + " Racer 2 pos: " + racer2.style.left);
