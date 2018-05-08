@@ -17,6 +17,6 @@ function race() {
     if ()
   }
    while (winner = null);
+  eurobeat.pause();
   eurobeat.currentTime = 0;
-  eurobeat.stop();
 }
