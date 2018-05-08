@@ -1,37 +1,39 @@
+var racer1 = document.getElementById("racer1");
+var racer2 = document.getElementById("racer2");
+var stoplight = document.getElementById("stoplight");
+var stoplightlink = document.getElementById("stoplightlink");
+var eurobeat = document.getElementById("eurobeat");
+
+var winner = 0;
+
 function race() {
 	console.log("Beginning race");
-
-	var racer1 = document.getElementById("racer1");
-	var racer2 = document.getElementById("racer2");
-	var stoplight = document.getElementById("stoplight");
-	var stoplightlink = document.getElementById("stoplightlink");
-	var eurobeat = document.getElementById("eurobeat");
-
-	var winner = 0;
 
 	eurobeat.volume = 0.2;
 	eurobeat.play();
 	stoplight.src = "resources/images/traffic-light-green.svg";
 
 	function tick() {
-		if (winner != 0) {
-			clearInterval(timer);
-			winner();
-		}
-
 		console.log("Iterating..."); // Sets the speeds of the racers.
-		var racer1_speed = Math.floor(Math.random()*(0.04)) + 0.03;
-		var racer2_speed = Math.floor(Math.random()*(0.04)) + 0.03;
+		var racer1_speed = Math.floor(Math.random() * 4) * 0.01 + 0.03;
+		var racer2_speed = Math.floor(Math.random() * 4) * 0.01 + 0.03;
 
 		// Transition them
+		console.log("R1Spd: " + racer1_speed + " R2Spd: " + racer2_speed);
+		console.log("R1Prev: " + racer1.style.left + " R2Prev: " + racer2.style.left);
 		racer1.style.left = (racer1.style.left.toLocaleString("en", {style: "decimal"}) + racer1_speed).toLocaleString("en", {style: "percentage"});
 		racer2.style.left = (racer2.style.left.toLocaleString("en", {style: "decimal"}) + racer2_speed).toLocaleString("en", {style: "percentage"});
+		console.log("R1Post: " + racer1.style.left + " R2Post: " + racer2.style.left);
 
 		//Check if car passed finish line
 		if (racer1.style.left.toLocaleString("en", {style: "decimial"}) > 0.9) {
 			winner = "racer1";
 		} else if (racer2.style.left.toLocaleString("en", {style: "decimial"}) > 0.9) {
 			winner = "racer2";
+		}
+		if (winner != 0) {
+			clearInterval(timer);
+			winner();
 		}
 	}
 	var timer = setInterval(tick, 5);
@@ -48,7 +50,5 @@ function winner() {
 
 function reset() {
 	console.log("Resetting race");
-
-	var stoplightlink = document.getElementById("stoplightlink");
 	stoplightlink.onclick = race;
 }
