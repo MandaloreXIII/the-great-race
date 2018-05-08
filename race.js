@@ -2,6 +2,8 @@ function race() {
   var winner = null;
   var racer1 = document.getElementById("racer1");
   var racer2 = document.getElementById("racer2");
+  var eurobeat = document.getElementById("eurobeat");
+  eurobeat.play();
   do {
     // Sets the speeds of the racers.
     var racer1_speed = Math.floor(Math.random()*(4)) + 3;
@@ -13,4 +15,6 @@ function race() {
     if ()
   }
    while (winner = null);
+  eurobeat.currentTime = 0;
+  eurobeat.stop();
 }
