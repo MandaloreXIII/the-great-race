@@ -18,6 +18,8 @@ function race() {
     if (racer1.left > "90%") {
       winner = "racer1";
     } else if (racer2.left > "90%") {
+    }
+    else if (racer2.left > "90%") {
       winner = "racer2";
     }
   }
