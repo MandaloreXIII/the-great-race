@@ -27,6 +27,8 @@ function endrace() {
 			winnertext.innerHTML = "BORING CORVETTE WINS!";
 		case "tie":
 			winnertext.innerHTML = "EVERYBODY WINS!";
+		default:
+			winnertext.innerHTML = "0xDEADBEEF";
 	}
 
 	winner = 0;
@@ -56,16 +58,12 @@ function race() {
 	stoplight.src = "resources/images/traffic-light-green.svg";
 
 	function tick() {
-		console.log("Iterating..."); // Sets the speeds of the racers.
 		var racer1_speed = Math.floor(Math.random() * 2) * 0.01;
 		var racer2_speed = Math.floor(Math.random() * 2) * 0.01;
 
 		// Transition them
-		console.log("R1Spd: " + racer1_speed + " R2Spd: " + racer2_speed);
-		console.log("R1Prev: " + racer1.style.left + " R2Prev: " + racer2.style.left);
 		racer1.style.left = (parseFloat(racer1.style.left)/100 + racer1_speed).toLocaleString("en", {style: "percent"});
 		racer2.style.left = (parseFloat(racer2.style.left)/100 + racer2_speed).toLocaleString("en", {style: "percent"});
-		console.log("R1Post: " + racer1.style.left + " R2Post: " + racer2.style.left);
 
 		//Check if car passed finish line
 		if (parseFloat(racer1.style.left) > 85) {
