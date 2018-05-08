@@ -21,13 +21,13 @@ body {
 #racer2 {
 	position: absolute;
 	top: 350pt;
-	left: 5%;
+	left: 30pt;
 }
 
 #stoplight {
 	position: absolute;
 	top: 30pt;
-	left: 5%;
+	left: 30pt;
 	width: 100pt;
 }
 
