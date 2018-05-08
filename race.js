@@ -19,7 +19,7 @@ function race() {
       winner = "racer1";
     } else if (racer2.left > "90%") {
     }
-    else if (racer2.left > "90%") {
+    elseif (racer2.left > "90%") {
       winner = "racer2";
     }
   }
