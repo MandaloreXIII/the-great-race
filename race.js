@@ -2,6 +2,7 @@ var racer1 = document.getElementById("racer1");
 var racer2 = document.getElementById("racer2");
 var stoplight = document.getElementById("stoplight");
 var stoplightlink = document.getElementById("stoplightlink");
+var winnertext = document.getElementById("winnertext");
 
 var eurobeat = document.getElementById("eurobeat");
 var winbeat = document.getElementById("playerwin");
@@ -19,10 +20,20 @@ function endrace() {
 	winbeat.volume = 0.4;
 	winbeat.play();
 
+	switch(winner) {
+		case "racer1":
+			winnertext.innerHTML = "藤原 拓海! WINRAR!";
+		case "racer2":
+			winnertext.innerHTML = "BORING CORVETTE WINS!";
+		case "tie":
+			winnertext.innerHTML = "EVERYBODY WINS!";
+	}
+
 	winner = 0;
 }
 
 function reset() {
+	winnertext.innerHTML = "";
 	console.log("Resetting race");
 
 	winbeat.pause()
