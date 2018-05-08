@@ -1,8 +1,10 @@
 function race() {
+	console.log("Beginning race");
+
 	var racer1 = document.getElementById("racer1");
 	var racer2 = document.getElementById("racer2");
 	var stoplight = document.getElementById("stoplight");
-	var stoplight_link = document.getElementById("stoplight_link");
+	var stoplightlink = document.getElementById("stoplightlink");
 	var eurobeat = document.getElementById("eurobeat");
 
 	var winner = 0;
@@ -12,6 +14,7 @@ function race() {
 	stoplight.src = "resources/images/traffic-light-green.svg";
 
 	do {
+		console.log("Iterating...");
 		// Sets the speeds of the racers.
 		var racer1_speed = Math.floor(Math.random()*(0.04)) + 0.03;
 		var racer2_speed = Math.floor(Math.random()*(0.04)) + 0.03;
@@ -28,15 +31,19 @@ function race() {
 		winner = "racer1";
 	} while (winner === 0);
 
+	console.log("Winner determined: " + winner);
+
 	eurobeat.pause();
 	eurobeat.currentTime = 0;
 	stoplight.src = "resources/images/traffic-light-red.svg";
-	stoplight_link.onclick = reset;
+	stoplightlink.onclick = reset;
 
 	return 0;
 }
 
 function reset() {
-	var stoplight_link = document.getElementById("stoplight_link");
-	stoplight_link.onclick = race;
+	console.log("Resetting race");
+
+	var stoplightlink = document.getElementById("stoplightlink");
+	stoplightlink.onclick = race;
 }
