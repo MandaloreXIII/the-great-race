@@ -15,10 +15,10 @@ function race() {
     racer1.left += racer1_speed;
     racer2.left += racer2_speed;
     //Check if car passed finish line
-    if (racer1.left = "100%") {
+    if (racer1.left > "90%") {
       winner = "racer1";
     }
-    elseif (racer2.left = "100%") {
+    elseif (racer2.left > "90%") {
       winner = "racer2";
     }
   }
