@@ -1,12 +1,14 @@
 @charset "utf-8";
 
-html{
+html {
 	background: url(resources/images/bg.jpg);
 }
 
 body {
+
 }
 
 .racer {
+	width: 60pt;
 }
 
