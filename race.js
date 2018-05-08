@@ -13,14 +13,19 @@ function race() {
 	eurobeat.play();
 	stoplight.src = "resources/images/traffic-light-green.svg";
 
-	do {
-		console.log("Iterating...");
-		// Sets the speeds of the racers.
+	function tick() {
+		if (winner != 0) {
+			clearInterval(timer);
+			winner();
+		}
+
+		console.log("Iterating..."); // Sets the speeds of the racers.
 		var racer1_speed = Math.floor(Math.random()*(0.04)) + 0.03;
 		var racer2_speed = Math.floor(Math.random()*(0.04)) + 0.03;
 
-		// Transition them using CSS
-		// TODO: That.
+		// Transition them
+		racer1.style.left = (racer1.style.left.toLocaleString("en", {style: "decimal"}) + racer1_speed).toLocaleString("en", {style: "percentage"});
+		racer2.style.left = (racer2.style.left.toLocaleString("en", {style: "decimal"}) + racer2_speed).toLocaleString("en", {style: "percentage"});
 
 		//Check if car passed finish line
 		if (racer1.style.left.toLocaleString("en", {style: "decimial"}) > 0.9) {
@@ -28,17 +33,17 @@ function race() {
 		} else if (racer2.style.left.toLocaleString("en", {style: "decimial"}) > 0.9) {
 			winner = "racer2";
 		}
-		winner = "racer1";
-	} while (winner === 0);
+	}
+	var timer = setInterval(tick, 5);
+}
 
+function winner() {
 	console.log("Winner determined: " + winner);
 
 	eurobeat.pause();
 	eurobeat.currentTime = 0;
 	stoplight.src = "resources/images/traffic-light-red.svg";
 	stoplightlink.onclick = reset;
-
-	return 0;
 }
 
 function reset() {
