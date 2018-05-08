@@ -28,7 +28,7 @@ function race() {
       winner = "racer2";
     }
   }
-   while true;
+   while (true);
   eurobeat.pause();
   eurobeat.currentTime = 0;
   return 0;
