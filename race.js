@@ -15,8 +15,8 @@ function race() {
 
 	function tick() {
 		console.log("Iterating..."); // Sets the speeds of the racers.
-		var racer1_speed = Math.floor(Math.random() * 4) * 0.01 + 0.03;
-		var racer2_speed = Math.floor(Math.random() * 4) * 0.01 + 0.03;
+		var racer1_speed = Math.floor(Math.random() * 6) * 0.01 + 0.03;
+		var racer2_speed = Math.floor(Math.random() * 6) * 0.01 + 0.03;
 
 		// Transition them
 		console.log("R1Spd: " + racer1_speed + " R2Spd: " + racer2_speed);
