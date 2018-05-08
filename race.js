@@ -15,7 +15,12 @@ function race() {
     racer1.left += racer1_speed;
     racer2.left += racer2_speed;
     //Check if car passed finish line
-    if ()
+    if (racer1.left = "100%") {
+      winner = "racer1";
+    }
+    elseif (racer2.left = "100%") {
+      winner = "racer2";
+    }
   }
    while (winner = null);
   eurobeat.pause();
