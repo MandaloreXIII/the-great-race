@@ -2,21 +2,38 @@ var racer1 = document.getElementById("racer1");
 var racer2 = document.getElementById("racer2");
 var stoplight = document.getElementById("stoplight");
 var stoplightlink = document.getElementById("stoplightlink");
+
 var eurobeat = document.getElementById("eurobeat");
+var winbeat = document.getElementById("playerwin");
 
 var winner = 0;
 
 function endrace() {
 	console.log("Winner determined: " + winner);
 
-	eurobeat.pause();
-	eurobeat.currentTime = 0;
+	eurobeat.volume = 0.16;
+
 	stoplight.src = "resources/images/traffic-light-red.svg";
 	stoplightlink.onclick = reset;
+
+	winbeat.volume = 0.4;
+	winbeat.play();
+
+	winner = 0;
 }
 
 function reset() {
 	console.log("Resetting race");
+
+	winbeat.pause()
+	winbeat.currentTime = 0;
+
+	eurobeat.pause()
+	eurobeat.currentTime = 0;
+
+	racer1.style.left = "5%";
+	racer2.style.left = "5%";
+
 	stoplightlink.onclick = race;
 }
 
