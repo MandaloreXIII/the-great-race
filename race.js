@@ -15,8 +15,8 @@ function race() {
 
 	function tick() {
 		console.log("Iterating..."); // Sets the speeds of the racers.
-		var racer1_speed = Math.floor(Math.random() * 6) * 0.01 + 0.03;
-		var racer2_speed = Math.floor(Math.random() * 6) * 0.01 + 0.03;
+		var racer1_speed = Math.floor(Math.random() * 2) * 0.01;
+		var racer2_speed = Math.floor(Math.random() * 2) * 0.01;
 
 		// Transition them
 		console.log("R1Spd: " + racer1_speed + " R2Spd: " + racer2_speed);
@@ -26,10 +26,10 @@ function race() {
 		console.log("R1Post: " + racer1.style.left + " R2Post: " + racer2.style.left);
 
 		//Check if car passed finish line
-		if (racer1.style.left.toLocaleString("en", {style: "decimial"}) > 0.9) {
+		if (parseFloat(racer1.style.left) > 85) {
 			winner = "racer1";
 		}
-		if (racer2.style.left.toLocaleString("en", {style: "decimial"}) > 0.9) {
+		if (parseFloat(racer2.style.left) > 85) {
 			if (winner == "racer1") {
 				winner = "tie";
 			} else {
